@@ -43,7 +43,7 @@
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Portfolio</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/resume">Résumé</a>
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="./resume.html">Résumé</a>
             </li>
           <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
@@ -384,6 +384,19 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/freelancer.min.js"></script>
+
+  <script>
+    var host = "lukenneth.github.io";
+    var host2 = "www.lukenneth.com";
+    var host3 = "www.lukenneth.github.io";
+    var loc = window.location.host;
+
+    if(loc == host || loc == host2 || loc == host3) {
+      if(loc.protocol == "http") {
+        window.location.protocol = "https";
+      }
+    }
+  </script>
 
 </body>
 
