@@ -358,7 +358,7 @@ a:focus, a:hover, a:active {
 }
 
 .text-secondary {
-  color: #ffffff !important;
+  color: #ffffff;
 }
 
 .btn-primary {
@@ -379,4 +379,52 @@ a:focus, a:hover, a:active {
 .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
   background-color: #1a252f;
   border-color: #1a252f;
+}
+
+#title {
+  color: #00003c !important;
+}
+
+#white-title {
+  color: #ffffff !important;
+}
+
+.caption-text {
+  color: #ffffff;
+  padding: 20px;
+  font-size: 24px;
+}
+
+.white-link {
+  color: #ffffff !important;
+  text-decoration-line: underline;
+  text-decoration-color: #ffffff;
+}
+
+.feature-img {
+  max-width: 100%;
+  margin: auto;
+}
+
+.feature-block {
+  max-width: 50% !important;
+  float: left;
+}
+
+.row2 {
+  display: inline-block;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.preview-video {
+  margin: auto;
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .feature-block {
+    max-width: 100% !important;
+    padding-bottom: 20px;
+  }
 }
