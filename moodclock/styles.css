@@ -1,0 +1,47 @@
+.spacer {
+  height: 80px;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.clock {
+  object-fit: contain;
+}
+
+.pointer {
+  position: absolute;
+  bottom: 54%;
+  left: 39%;
+}
+
+.button_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.button_left {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  touch-action: manipulation;
+}
+
+.button_right {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  touch-action: manipulation;
+}
