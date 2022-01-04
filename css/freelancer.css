@@ -1,5 +1,5 @@
 body {
-  font-family: 'Lato';
+  font-family: "Lato";
 }
 
 h1,
@@ -9,7 +9,7 @@ h4,
 h5,
 h6 {
   font-weight: 700;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
 }
 
 hr.star-light,
@@ -28,10 +28,10 @@ hr.star-dark {
 hr.star-light:after,
 hr.star-dark:after {
   position: relative;
-  top: -.8em;
+  top: -0.8em;
   display: inline-block;
   padding: 0 0.25em;
-  content: '\f005';
+  content: "\f005";
   font-family: FontAwesome;
   font-size: 2em;
 }
@@ -42,7 +42,7 @@ hr.star-light {
 
 hr.star-light:after {
   color: #fff;
-  background-color: #00003c;
+  background-color: #1d1a15;
 }
 
 hr.star-dark {
@@ -100,11 +100,11 @@ section h2 {
   padding-top: 1rem;
   padding-bottom: 1rem;
   font-weight: 700;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
 }
 
 #mainNav .navbar-brand {
-  color: #00003c;
+  color: #1d1a15;
 }
 
 #mainNav .navbar-nav {
@@ -113,19 +113,20 @@ section h2 {
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link {
-  color: #00003c;
+  color: #1d1a15;
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link:hover {
-  color: #00003c;
+  color: #1d1a15;
 }
 
-#mainNav .navbar-nav li.nav-item a.nav-link:active, #mainNav .navbar-nav li.nav-item a.nav-link:focus {
-  color: #00003c;
+#mainNav .navbar-nav li.nav-item a.nav-link:active,
+#mainNav .navbar-nav li.nav-item a.nav-link:focus {
+  color: #1d1a15;
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link.active {
-  color: #00003c;
+  color: #1d1a15;
 }
 
 #mainNav .navbar-toggler {
@@ -152,11 +153,13 @@ section h2 {
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link.active {
     color: #fff;
-    background: #00003c;
+    background: #1d1a15;
   }
-  #mainNav .navbar-nav > li.nav-item > a.nav-link.active:active, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
+  #mainNav .navbar-nav > li.nav-item > a.nav-link.active:active,
+  #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus,
+  #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
     color: #fff;
-    background: #00003c;
+    background: #1d1a15;
   }
   #mainNav.navbar-shrink {
     padding-top: 0.5rem;
@@ -179,7 +182,7 @@ header.masthead h1 {
 
 header.masthead h2 {
   font-size: 1.3rem;
-  font-family: 'Lato';
+  font-family: "Lato";
 }
 
 @media (min-width: 992px) {
@@ -219,7 +222,10 @@ header.masthead h2 {
   opacity: 1;
 }
 
-.portfolio .portfolio-item .portfolio-item-caption .portfolio-item-caption-content {
+.portfolio
+  .portfolio-item
+  .portfolio-item-caption
+  .portfolio-item-caption-content {
   font-size: 1.5rem;
 }
 
@@ -315,11 +321,26 @@ header.masthead h2 {
 }
 
 .floating-label-form-group-with-focus label {
-  color: #00003c;
+  color: #1d1a15;
 }
 
 form .row:first-child .floating-label-form-group {
   border-top: 1px solid #e9ecef;
+}
+
+.alt-text {
+  color: #1d1a15;
+}
+
+.column {
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer {
@@ -334,10 +355,12 @@ form .row:first-child .floating-label-form-group {
 }
 
 a {
-  color: #00003c;
+  color: #1d1a15;
 }
 
-a:focus, a:hover, a:active {
+a:focus,
+a:hover,
+a:active {
   color: #128f76;
 }
 
@@ -346,7 +369,7 @@ a:focus, a:hover, a:active {
 }
 
 .bg-primary {
-  background-color: #00003c !important;
+  background-color: #1d1a15 !important;
 }
 
 .bg-secondary {
@@ -354,7 +377,7 @@ a:focus, a:hover, a:active {
 }
 
 .text-primary {
-  color: #00003c !important;
+  color: #1d1a15 !important;
 }
 
 .text-secondary {
@@ -362,11 +385,13 @@ a:focus, a:hover, a:active {
 }
 
 .btn-primary {
-  background-color: #00003c;
-  border-color: #00003c;
+  background-color: #1d1a15;
+  border-color: #1d1a15;
 }
 
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
   background-color: #128f76;
   border-color: #128f76;
 }
@@ -376,13 +401,15 @@ a:focus, a:hover, a:active {
   border-color: #ffffff;
 }
 
-.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:active {
   background-color: #1a252f;
   border-color: #1a252f;
 }
 
 #title {
-  color: #00003c !important;
+  color: #1d1a15 !important;
 }
 
 #white-title {
@@ -391,6 +418,28 @@ a:focus, a:hover, a:active {
 
 .caption-text {
   color: #ffffff;
+  padding: 20px;
+  font-size: 24px;
+}
+
+.image-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.music-img {
+  max-width: 350px;
+}
+
+@media (max-width: 992px) {
+  .image-row {
+  }
+}
+
+.caption-text-alt {
+  color: #1d1a15;
   padding: 20px;
   font-size: 24px;
 }
