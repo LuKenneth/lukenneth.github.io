@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Server Build</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        color: #333;
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      h1 {
+        color: #2c3e50;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 10px;
+      }
+
+      .metadata {
+        color: #666;
+        font-size: 0.9em;
+        margin-bottom: 30px;
+      }
+
+      .content {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        color: #2c3e50;
+        margin-top: 30px;
+      }
+
+      code {
+        background-color: #f7f9fa;
+        padding: 2px 5px;
+        border-radius: 3px;
+        font-family: "Courier New", Courier, monospace;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 20px auto;
+      }
+
+      .specs-list h3 {
+        color: #2c3e50;
+        font-size: 1.1em;
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+
+      .specs-list ul {
+        margin-top: 5px;
+        margin-bottom: 15px;
+      }
+
+      .specs-list strong {
+        color: #2c3e50;
+      }
+
+      .article-image {
+        margin: 30px 0;
+        text-align: center;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .article-image img {
+        max-width: 100%;
+        max-height: 300px;
+        width: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .article-image figcaption {
+        margin-top: 10px;
+        color: #666;
+        font-style: italic;
+        font-size: 0.9em;
+      }
+
+      .image-row {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        margin: 30px auto;
+        max-width: 800px;
+      }
+
+      .image-row img {
+        max-width: calc(50% - 10px);
+        max-height: 300px;
+        width: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Home Server Build</h1>
+      <div class="metadata">
+        Published on September 9, 2024 | By Luke Patterson
+      </div>
+    </header>
+
+    <article class="content">
+      <p>
+        After years of relying on cloud/streaming services, I decided to take
+        control of my data, media, and wallet by building my own home server.
+        This project has been both challenging and rewarding, and I'd like to
+        share my experience with you.
+      </p>
+
+      <h2>Why Build a Home Server?</h2>
+      <p>
+        Inspired by Kyle Chayka's "<a
+          href="https://www.amazon.com/Filterworld-How-Algorithms-Flattened-Culture/dp/0385548281"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Filter World</a
+        >," I began reflecting on how algorithmic recommendations and streaming
+        services were shaping my media consumption. I realized I was spending
+        more on subscriptions while having less meaningful control over my
+        digital life. Building a home server became my way of reclaiming agency
+        over my data and media choices.
+      </p>
+      <p>
+        Beyond the practical benefits of data control and privacy, running your
+        own server creates a more intentional relationship with technology.
+        Instead of letting algorithms decide what I should watch or listen to
+        next, I now curate my own media library. This deliberate approach has
+        made my entertainment choices more meaningful and less driven by
+        automated suggestions.
+      </p>
+      <p>
+        The technical advantages are significant too - from faster local network
+        speeds to the ability to customize every aspect of my setup. My media is
+        now also available offline, for free, forever. Plus, the learning
+        experience of building and maintaining the system has been invaluable
+        for my understanding of modern technology infrastructure.
+      </p>
+
+      <h2>Hardware Specifications</h2>
+      <p>Total build cost: $720.00 (including taxes and shipping)</p>
+      <div class="specs-list">
+        <h3>Core Components</h3>
+        <ul>
+          <li>
+            <strong>Case:</strong> Antec Performance Series P101 Silent Black
+            ATX Mid Tower ($114.99)
+          </li>
+          <li>
+            <strong>CPU:</strong> Intel Core i5-8500 - 3.0GHz 6 Core LGA1151
+            ($40.95)
+          </li>
+          <li>
+            <strong>Motherboard:</strong> MSI Z390-A PRO LGA1151 ATX ($99.95)
+          </li>
+          <li>
+            <strong>RAM:</strong> CORSAIR Vengeance LPX 32GB (2x16GB) DDR4 3200
+            ($57.99)
+          </li>
+          <li>
+            <strong>Power Supply:</strong> CORSAIR RM750x 80 PLUS Gold ($119.99)
+          </li>
+        </ul>
+
+        <h3>Storage</h3>
+        <ul>
+          <li>
+            <strong>Boot Drive:</strong> Samsung 970 EVO Plus 250GB NVMe SSD
+            ($28.00)
+          </li>
+          <li>
+            <strong>Mass Storage:</strong> Seagate BarraCuda 4TB 5400RPM HDD
+            ($84.99)
+          </li>
+          <li>
+            <strong>Optical Drive:</strong> LG WH16NS40 16X Blu-ray Writer
+            ($67.99)
+          </li>
+          <li>
+            <strong>USB Boot Drive:</strong> Samsung BAR Plus 256GB ($21.53)
+          </li>
+        </ul>
+
+        <h3>Cooling & Accessories</h3>
+        <ul>
+          <li>
+            <strong>CPU Cooler:</strong> Noctua NH-U12S with NF-F12 120mm Fan
+            ($21.00)
+          </li>
+          <li>
+            <strong>Thermal Paste:</strong> Cooler Master CryoFuze ($5.81)
+          </li>
+        </ul>
+
+        <h3>Software</h3>
+        <ul>
+          <li><strong>Operating System:</strong> Unraid</li>
+        </ul>
+      </div>
+
+      <h2>Software Stack</h2>
+      <p>
+        I run
+        <a href="https://unraid.net" target="_blank" rel="noopener noreferrer"
+          >Unraid</a
+        >
+        as my operating system, which provides an excellent balance of storage
+        management, docker support, and ease of use. For media management, I use
+        <a href="https://www.plex.tv" target="_blank" rel="noopener noreferrer"
+          >Plex</a
+        >
+        as my central hub for movies, TV shows, music, photos, and audiobooks.
+        The Plex ecosystem, particularly PlexAmp, has completely replaced
+        streaming services on my mobile devices, giving me access to my entire
+        music and audiobook library with a polished listening experience.
+      </p>
+
+      <figure class="article-image">
+        <div class="image-row">
+          <img src="plex.png" alt="Plex Media Server Dashboard" />
+          <img src="unraid.png" alt="Unraid Server Dashboard" />
+        </div>
+        <figcaption>
+          My media server stack: Plex handles the media organization and
+          streaming while Unraid manages the underlying storage and containers
+        </figcaption>
+      </figure>
+
+      <h3>Docker Containers</h3>
+      <p>
+        Unraid's docker support makes it easy to run various services. My main
+        containers include:
+      </p>
+      <ul>
+        <li>
+          <strong>MakeMKV:</strong> For ripping my Blu-ray collection to digital
+          formats
+        </li>
+        <li>
+          <strong>Ripper:</strong> Handles CD ripping for building my music
+          library
+        </li>
+        <li>
+          <strong>EmulatorJS:</strong> Provides retro gaming capabilities for
+          classic console games
+        </li>
+        <li>
+          <strong>Plex:</strong> Powers all my media streaming needs, both at
+          home and remotely
+        </li>
+        <li>
+          <strong>qBittorrentVPN:</strong> Handles downloading while ensuring
+          privacy through VPN integration
+        </li>
+      </ul>
+
+      <h2>How I Source My Media</h2>
+      <figure class="article-image">
+        <div class="image-row">
+          <img
+            src="librarymovies.JPG"
+            alt="Collection of Blu-rays from the library"
+          />
+          <img
+            src="librarymedia.JPG"
+            alt="Various media types available at the library"
+          />
+        </div>
+        <figcaption>
+          A typical haul of Blu-rays and CDs from my local library
+        </figcaption>
+      </figure>
+      <p>
+        My local public library has been an incredible resource for building my
+        media collection. With an extensive catalog of Blu-rays, CDs, ebooks,
+        and audiobooks available for free checkout, I've been able to digitize a
+        vast collection of movies, TV shows, music, and books. The library's
+        commitment to maintaining a diverse and current collection means I
+        always have access to both new releases and classic content.
+      </p>
+
+      <h2>A Note About Music</h2>
+      <p>
+        While my server handles digital playback beautifully, my primary music
+        listening happens on vinyl. There's something special about the ritual
+        of selecting a record, placing it on the turntable, and experiencing the
+        music as a complete album. This intentional listening approach perfectly
+        complements my philosophy of mindful media consumption.
+      </p>
+      <p>
+        For mobile listening, I use PlexAmp to stream my digital collection. Its
+        thoughtful interface and high-quality playback make it the perfect
+        bridge between my carefully curated music library and modern streaming
+        convenience.
+      </p>
+      <p>
+        When I do listen digitally, I prioritize high-quality sources: either
+        lossless rips from my CD collection or digital purchases made directly
+        from artists. As a musician myself (<a
+          href="https://whosavedwho.band"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Who Saved Who</a
+        >), I'm a strong believer in supporting fellow artists. I regularly
+        purchase albums through Bandcamp (where artists receive a larger share
+        of sales) or iTunes when that's the artist's preferred platform. These
+        high-quality, DRM-free files ensure I can enjoy my favorite artists'
+        work indefinitely while knowing I've contributed to their ability to
+        create more music.
+      </p>
+
+      <figure class="article-image">
+        <div class="image-row">
+          <img src="vinyl.JPG" alt="Vinyl record player setup" />
+          <img src="ipod.JPG" alt="iPod Classic - Digital meets analog" />
+          <img src="plexamp.jpeg" alt="PlexAmp - Modern music streaming" />
+        </div>
+        <figcaption>
+          The evolution of my music listening: From vinyl to iPod to PlexAmp,
+          each offering its own unique way to experience music
+        </figcaption>
+      </figure>
+
+      <h2>Future Plans</h2>
+      <p>
+        I'm currently experimenting with creating my own private internet by
+        archiving complete copies of my favorite websites. This project is
+        inspired by the idea of digital preservation and the desire to maintain
+        access to content that might otherwise disappear. I'm particularly
+        interested in preserving gaming websites and their associated content,
+        ensuring these digital artifacts remain accessible even if the original
+        sites go offline.
+      </p>
+      <p>
+        The goal isn't just backup - it's about creating a curated, offline
+        version of the internet that contains the content I find most valuable.
+        This approach aligns with my broader philosophy of maintaining control
+        and intentionality in my digital life.
+      </p>
+    </article>
+  </body>
+</html>
