@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#f4f1ea" />
+    <title>San Diego</title>
+
+    <link rel="icon" href="../favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <link rel="stylesheet" href="sandiego.css" />
+  </head>
+
+  <body>
+    <header class="topbar">
+      <a href="../">Luke Patterson</a>
+      <nav aria-label="Sections">
+        <a href="#days">Days</a>
+        <a href="#links">Links</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <p>Aug 4-8, 2026</p>
+          <h1>San Diego</h1>
+        </div>
+        <div class="airbnb" aria-label="Airbnb">
+          <span>Airbnb</span>
+          <address>Hillcrest, San Diego</address>
+          <div class="airbnb-meta">
+            <span>Bag drop after 11 AM</span>
+            <span>Early check-in 1-2 PM</span>
+            <span>Message host when en route</span>
+          </div>
+          <div class="actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Hillcrest%20San%20Diego" target="_blank" rel="noopener">Maps</a>
+            <a href="https://www.uber.com/" target="_blank" rel="noopener">Uber</a>
+            <a href="https://www.lyft.com/" target="_blank" rel="noopener">Lyft</a>
+            <button type="button" data-copy="Hillcrest, San Diego">Copy</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="days" class="days" aria-labelledby="days-title">
+        <div class="section-line">
+          <h2 id="days-title">Days</h2>
+          <div class="day-tabs" role="tablist" aria-label="Trip days">
+            <button type="button" data-day="tuesday">Tue</button>
+            <button type="button" data-day="wednesday">Wed</button>
+            <button type="button" data-day="thursday">Thu</button>
+            <button type="button" data-day="friday">Fri</button>
+            <button type="button" data-day="saturday">Sat</button>
+          </div>
+        </div>
+
+        <article class="day-panel" id="tuesday" data-date="2026-08-04">
+          <div class="day-head">
+            <div>
+              <span>Tuesday</span>
+              <h3>Arrival / Balboa / Waterbar</h3>
+            </div>
+            <dl>
+              <div><dt>Level</dt><dd>Easy</dd></div>
+              <div><dt>Wear</dt><dd>City clothes</dd></div>
+              <div><dt>Fixed</dt><dd>7:15 PM</dd></div>
+            </dl>
+          </div>
+          <div class="schedule">
+            <details open>
+              <summary><time>11 AM</time><strong>SAN to Airbnb</strong><span>Bag drop</span></summary>
+              <div class="detail">
+                <p>Drop bags after 11. Message host when en route.</p>
+                <div class="actions">
+                  <a href="https://www.uber.com/" target="_blank" rel="noopener">Uber</a>
+                  <a href="https://www.lyft.com/" target="_blank" rel="noopener">Lyft</a>
+                  <a href="https://www.google.com/maps/search/?api=1&query=Hillcrest%20San%20Diego" target="_blank" rel="noopener">Hillcrest</a>
+                </div>
+              </div>
+            </details>
+
+            <details>
+              <summary><time>1-2 PM</time><strong>Early check-in</strong><span>Airbnb</span></summary>
+              <div class="detail">
+                <p>Host is planning on the house being ready before standard check-in.</p>
+              </div>
+            </details>
+
+            <details>
+              <summary><time>Afternoon</time><strong>Balboa Park loop</strong><span>Gardens / art</span></summary>
+              <div class="detail">
+                <address>1549 El Prado, San Diego, CA 92101</address>
+                <p>Balboa Park, Japanese Friendship Garden, Spanish Village.</p>
+                <div class="actions">
+                  <a href="https://www.sandiego.gov/park-and-recreation/parks/regional/balboa" target="_blank" rel="noopener">Balboa</a>
+                  <a href="https://www.niwa.org/" target="_blank" rel="noopener">JFG</a>
+                  <a href="https://villageartscenter.org/" target="_blank" rel="noopener">Spanish Village</a>
+                  <a href="https://www.google.com/maps/search/?api=1&query=1549%20El%20Prado%20San%20Diego%20CA%2092101" target="_blank" rel="noopener">Maps</a>
+                </div>
+              </div>
+            </details>
+
+            <details>
+              <summary><time>7:15 PM</time><strong>Waterbar</strong><span>Reservation</span></summary>
+              <div class="detail">
+                <address>4325 Ocean Blvd, San Diego, CA 92109</address>
+                <div class="actions">
+                  <a href="https://waterbarsd.com/" target="_blank" rel="noopener">Waterbar</a>
+                  <a href="https://www.google.com/maps/search/?api=1&query=4325%20Ocean%20Blvd%20San%20Diego%20CA%2092109" target="_blank" rel="noopener">Maps</a>
+                  <button type="button" data-copy="4325 Ocean Blvd, San Diego, CA 92109">Copy</button>
+                </div>
+              </div>
+            </details>
+          </div>
+          <div class="day-map" data-map-day="tuesday" aria-label="Tuesday map"></div>
+
+          <div class="checks">
+            <label><input type="checkbox" id="tu-charger" /> charger</label>
+            <label><input type="checkbox" id="tu-host" /> host message</label>
+            <label><input type="checkbox" id="tu-waterbar" /> Waterbar reservation</label>
+          </div>
+        </article>
+
+        <article class="day-panel" id="wednesday" data-date="2026-08-05">
+          <div class="day-head">
+            <div>
+              <span>Wednesday</span>
+              <h3>La Jolla coast</h3>
+            </div>
+            <dl>
+              <div><dt>Level</dt><dd>High</dd></div>
+              <div><dt>Wear</dt><dd>Walking shoes</dd></div>
+              <div><dt>Bring</dt><dd>Water, hat, sunscreen</dd></div>
+            </dl>
+          </div>
+          <div class="schedule">
+            <details open>
+              <summary><time>Breakfast</time><strong>Caroline's or Cove House</strong><span>La Jolla</span></summary>
+              <div class="detail columns">
+                <div>
+                  <h4>Caroline's Seaside Cafe</h4>
+                  <address>8610 Charles F. Kennel Way, La Jolla, CA 92037</address>
+                  <div class="actions">
+                    <a href="https://carolinesseasidecafe.com/" target="_blank" rel="noopener">Site</a>
+                    <a href="https://carolinesseasidecafe.com/menu/" target="_blank" rel="noopener">Menu</a>
+                    <a href="https://www.google.com/maps/search/?api=1&query=8610%20Charles%20F.%20Kennel%20Way%20La%20Jolla%20CA%2092037" target="_blank" rel="noopener">Maps</a>
+                  </div>
+                </div>
+                <div>
+                  <h4>Cove House</h4>
+                  <address>8030 Girard Ave, La Jolla, CA 92037</address>
+                  <div class="actions">
+                    <a href="https://www.covehouselajolla.com/" target="_blank" rel="noopener">Site</a>
+                    <a href="https://www.covehouselajolla.com/menu" target="_blank" rel="noopener">Menu</a>
+                    <a href="https://www.google.com/maps/search/?api=1&query=8030%20Girard%20Ave%20La%20Jolla%20CA%2092037" target="_blank" rel="noopener">Maps</a>
+                  </div>
+                </div>
+              </div>
+            </details>
+
+            <details>
+              <summary><time>Late AM</time><strong>Sunny Jim's Cave</strong><span>145 stairs</span></summary>
+              <div class="detail">
+                <address>1325 Coast Blvd, La Jolla, CA 92037</address>
+                <p>First-come, first-served. Wear closed-toe shoes.</p>
+                <div class="actions">
+                  <a href="https://www.cavestore.com/" target="_blank" rel="noopener">Site</a>
+                  <a href="https://www.google.com/maps/search/?api=1&query=1325%20Coast%20Blvd%20La%20Jolla%20CA%2092037" target="_blank" rel="noopener">Maps</a>
+                  <button type="button" data-copy="1325 Coast Blvd, La Jolla, CA 92037">Copy</button>
+                </div>
+              </div>
+            </details>
+
+            <details>
+              <summary><time>Midday</time><strong>La Jolla Cove</strong><span>Sea lions</span></summary>
+              <div class="detail">
+                <address>1100 Coast Blvd, La Jolla, CA 92037</address>
+                <div class="actions">
+                  <a href="https://www.sandiego.org/explore/things-to-do/beaches-bays/la-jolla.aspx" target="_blank" rel="noopener">Info</a>
+                  <a href="https://www.google.com/maps/search/?api=1&query=1100%20Coast%20Blvd%20La%20Jolla%20CA%2092037" target="_blank" rel="noopener">Maps</a>
+                </div>
+              </div>
+            </details>
+
+            <details>
+              <summary><time>Afternoon</time><strong>Gliderport / Torrey Pines</strong><span>Views</span></summary>
+              <div class="detail">
+                <address>2800 Torrey Pines Scenic Dr, La Jolla, CA 92037</address>
+                <p>Gliderport first. Reserve hike optional.</p>
+                <div class="actions">
+                  <a href="https://www.flytorrey.com/directions/" target="_blank" rel="noopener">Gliderport</a>
+                  <a href="https://www.parks.ca.gov/?page_id=657" target="_blank" rel="noopener">Reserve</a>
+                  <a href="https://www.google.com/maps/search/?api=1&query=2800%20Torrey%20Pines%20Scenic%20Dr%20La%20Jolla%20CA%2092037" target="_blank" rel="noopener">Maps</a>
+                </div>
+              </div>
+            </details>
+
+            <details>
+              <summary><time>Dinner</time><strong>La Jolla options</strong><span>Open</span></summary>
+              <div class="detail">
+                <div class="actions">
+                  <a href="https://letstaco.com/location/la-jolla/" target="_blank" rel="noopener">The Taco Stand</a>
+                  <a href="https://www.georgesatthecove.com/ocean-terrace" target="_blank" rel="noopener">George's</a>
+                  <a href="https://www.marineroom.com/" target="_blank" rel="noopener">Marine Room</a>
+                </div>
+              </div>
+            </details>
+          </div>
+          <div class="day-map" data-map-day="wednesday" aria-label="Wednesday map"></div>
+
+          <div class="checks">
+            <label><input type="checkbox" id="we-water" /> water</label>
+            <label><input type="checkbox" id="we-sunscreen" /> sunscreen</label>
+            <label><input type="checkbox" id="we-hat" /> hat</label>
+            <label><input type="checkbox" id="we-shoes" /> shoes</label>
+          </div>
+        </article>
+
+        <article class="day-panel" id="thursday" data-date="2026-08-06">
+          <div class="day-head">
+            <div>
+              <span>Thursday</span>
+              <h3>Little Italy / SOMA</h3>
+            </div>
+            <dl>
+              <div><dt>Level</dt><dd>Medium</dd></div>
+              <div><dt>Wear</dt><dd>Concert fit, light layer</dd></div>
+              <div><dt>Fixed</dt><dd>7 PM</dd></div>
+            </dl>
+          </div>
+          <div class="schedule">
+            <details open>
+              <summary><time>Morning</time><strong>Hillcrest coffee</strong><span>Slow</span></summary>
+              <div class="detail">
+                <div class="actions">
+                  <a href="https://betterbuzzcoffee.com/pages/hillcrest" target="_blank" rel="noopener">Better Buzz</a>
+                  <a href="https://www.google.com/maps/search/?api=1&query=coffee%20near%20Hillcrest%20San%20Diego" target="_blank" rel="noopener">Coffee</a>
+                </div>
+              </div>
+            </details>
+
+            <details>
+              <summary><time>Midday</time><strong>Little Italy / waterfront</strong><span>Food / shops</span></summary>
+              <div class="detail">
+                <address>1747 India St, San Diego, CA 92101</address>
+                <div class="actions">
+                  <a href="https://www.littleitalysd.com/go/filippis-pizza-grotto" target="_blank" rel="noopener">Filippi's</a>
+                  <a href="https://www.midway.org/" target="_blank" rel="noopener">Midway</a>
+                  <a href="https://www.google.com/maps/search/?api=1&query=Little%20Italy%20San%20Diego" target="_blank" rel="noopener">Maps</a>
+                </div>
+              </div>
+            </details>
+
+            <details>
+              <summary><time>Lunch</time><strong>Liberty Public Market</strong><span>Food hall</span></summary>
+              <div class="detail">
+                <address>2820 Historic Decatur Rd, San Diego, CA 92106</address>
+                <div class="actions">
+                  <a href="https://libertypublicmarketsd.com/home-new/" target="_blank" rel="noopener">Site</a>
+                  <a href="https://www.google.com/maps/search/?api=1&query=2820%20Historic%20Decatur%20Rd%20San%20Diego%20CA%2092106" target="_blank" rel="noopener">Maps</a>
+                </div>
+              </div>
+            </details>
+
+            <details>
+              <summary><time>7 PM</time><strong>Beach Bunny + The Beths</strong><span>SOMA</span></summary>
+              <div class="detail">
+                <address>3350 Sports Arena Blvd, San Diego, CA 92110</address>
+                <div class="actions">
+                  <a href="https://www.somasandiego.com/" target="_blank" rel="noopener">SOMA</a>
+                  <a href="https://www.google.com/maps/search/?api=1&query=3350%20Sports%20Arena%20Blvd%20San%20Diego%20CA%2092110" target="_blank" rel="noopener">Maps</a>
+                  <button type="button" data-copy="3350 Sports Arena Blvd, San Diego, CA 92110">Copy</button>
+                </div>
+              </div>
+            </details>
+          </div>
+          <div class="day-map" data-map-day="thursday" aria-label="Thursday map"></div>
+
+          <div class="checks">
+            <label><input type="checkbox" id="th-ticket" /> tickets</label>
+            <label><input type="checkbox" id="th-id" /> ID</label>
+            <label><input type="checkbox" id="th-layer" /> layer</label>
+            <label><input type="checkbox" id="th-earplugs" /> earplugs</label>
+          </div>
+        </article>
+
+        <article class="day-panel" id="friday" data-date="2026-08-07">
+          <div class="day-head">
+            <div>
+              <span>Friday</span>
+              <h3>Flex / Padres</h3>
+            </div>
+            <dl>
+              <div><dt>Level</dt><dd>Flexible</dd></div>
+              <div><dt>Wear</dt><dd>Padres / comfortable shoes</dd></div>
+              <div><dt>Fixed</dt><dd>6:40 PM</dd></div>
+            </dl>
+          </div>
+          <div class="schedule">
+            <details open>
+              <summary><time>Day</time><strong>Pacific Beach or North Park</strong><span>Flexible</span></summary>
+              <div class="detail columns">
+                <div>
+                  <h4>Pacific Beach</h4>
+                  <div class="actions">
+                    <a href="https://www.worldfamouspb.com/" target="_blank" rel="noopener">World Famous</a>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Pacific%20Beach%20San%20Diego" target="_blank" rel="noopener">Maps</a>
+                  </div>
+                </div>
+                <div>
+                  <h4>North Park</h4>
+                  <div class="actions">
+                    <a href="https://verbatimbooks.com/" target="_blank" rel="noopener">Verbatim</a>
+                    <a href="https://www.google.com/maps/search/?api=1&query=North%20Park%20San%20Diego" target="_blank" rel="noopener">Maps</a>
+                  </div>
+                </div>
+              </div>
+            </details>
+
+            <details>
+              <summary><time>6:40 PM</time><strong>Padres vs. Astros</strong><span>Petco Park</span></summary>
+              <div class="detail">
+                <address>100 Park Blvd, San Diego, CA 92101</address>
+                <div class="actions">
+                  <a href="https://www.mlb.com/padres/tickets/single-game-tickets" target="_blank" rel="noopener">Tickets</a>
+                  <a href="https://www.mlb.com/padres/ballpark/information/guide" target="_blank" rel="noopener">Guide</a>
+                  <a href="https://www.google.com/maps/search/?api=1&query=100%20Park%20Blvd%20San%20Diego%20CA%2092101" target="_blank" rel="noopener">Maps</a>
+                  <button type="button" data-copy="100 Park Blvd, San Diego, CA 92101">Copy</button>
+                </div>
+              </div>
+            </details>
+
+            <details>
+              <summary><time>Late</time><strong>California burrito</strong><span>Near Petco</span></summary>
+              <div class="detail">
+                <div class="actions">
+                  <a href="https://www.google.com/maps/search/?api=1&query=california%20burrito%20near%20Petco%20Park" target="_blank" rel="noopener">Nearby</a>
+                  <a href="https://tacoselgordobc.com/locations/" target="_blank" rel="noopener">Tacos El Gordo</a>
+                </div>
+              </div>
+            </details>
+          </div>
+          <div class="day-map" data-map-day="friday" aria-label="Friday map"></div>
+
+          <div class="checks">
+            <label><input type="checkbox" id="fr-ticket" /> tickets</label>
+            <label><input type="checkbox" id="fr-bag" /> bag rules</label>
+            <label><input type="checkbox" id="fr-hat" /> hat</label>
+            <label><input type="checkbox" id="fr-id" /> ID</label>
+          </div>
+        </article>
+
+        <article class="day-panel" id="saturday" data-date="2026-08-08">
+          <div class="day-head">
+            <div>
+              <span>Saturday</span>
+              <h3>Depart</h3>
+            </div>
+            <dl>
+              <div><dt>Level</dt><dd>Easy</dd></div>
+              <div><dt>Wear</dt><dd>Travel clothes</dd></div>
+              <div><dt>Bring</dt><dd>Chargers</dd></div>
+            </dl>
+          </div>
+          <div class="schedule">
+            <details open>
+              <summary><time>Morning</time><strong>Breakfast / coffee</strong><span>Hillcrest</span></summary>
+              <div class="detail">
+                <div class="actions">
+                  <a href="https://www.google.com/maps/search/?api=1&query=breakfast%20near%20Hillcrest%20San%20Diego" target="_blank" rel="noopener">Breakfast</a>
+                  <a href="https://www.google.com/maps/search/?api=1&query=coffee%20near%20Hillcrest%20San%20Diego" target="_blank" rel="noopener">Coffee</a>
+                </div>
+              </div>
+            </details>
+
+            <details>
+              <summary><time>Airport</time><strong>SAN</strong><span>Depart</span></summary>
+              <div class="detail">
+                <address>3225 N Harbor Dr, San Diego, CA 92101</address>
+                <div class="actions">
+                  <a href="https://www.san.org/" target="_blank" rel="noopener">Airport</a>
+                  <a href="https://www.google.com/maps/search/?api=1&query=3225%20N%20Harbor%20Dr%20San%20Diego%20CA%2092101" target="_blank" rel="noopener">Maps</a>
+                  <a href="https://www.uber.com/" target="_blank" rel="noopener">Uber</a>
+                  <a href="https://www.lyft.com/" target="_blank" rel="noopener">Lyft</a>
+                </div>
+              </div>
+            </details>
+          </div>
+          <div class="day-map" data-map-day="saturday" aria-label="Saturday map"></div>
+
+          <div class="checks">
+            <label><input type="checkbox" id="sa-pack" /> chargers</label>
+            <label><input type="checkbox" id="sa-sweep" /> room sweep</label>
+            <label><input type="checkbox" id="sa-flight" /> flight status</label>
+          </div>
+        </article>
+      </section>
+
+      <section id="links" class="links-section" aria-labelledby="links-title">
+        <div class="section-line">
+          <h2 id="links-title">Links</h2>
+        </div>
+        <div class="link-grid">
+          <a href="https://www.somasandiego.com/" target="_blank" rel="noopener">SOMA</a>
+          <a href="https://www.mlb.com/padres/tickets/single-game-tickets" target="_blank" rel="noopener">Padres</a>
+          <a href="https://www.cavestore.com/" target="_blank" rel="noopener">Sunny Jim's</a>
+          <a href="https://www.flytorrey.com/directions/" target="_blank" rel="noopener">Gliderport</a>
+          <a href="https://libertypublicmarketsd.com/home-new/" target="_blank" rel="noopener">Liberty Public Market</a>
+          <a href="https://waterbarsd.com/" target="_blank" rel="noopener">Waterbar</a>
+          <a href="https://www.uber.com/" target="_blank" rel="noopener">Uber</a>
+          <a href="https://www.lyft.com/" target="_blank" rel="noopener">Lyft</a>
+        </div>
+      </section>
+    </main>
+
+    <div class="toast" role="status" aria-live="polite" hidden>Copied</div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="sandiego.js"></script>
+  </body>
+</html>
