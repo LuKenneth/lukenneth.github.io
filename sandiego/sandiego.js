@@ -8,10 +8,10 @@
   const airbnb = {
     type: "airbnb",
     name: "Airbnb",
-    note: "Hillcrest",
+    note: "3678 Herbert Street",
     lat: 32.7489,
     lng: -117.1611,
-    url: "https://www.google.com/maps/search/?api=1&query=Hillcrest%20San%20Diego"
+    url: "https://www.google.com/maps/search/?api=1&query=3678%20Herbert%20Street%2C%20San%20Diego%2C%20CA%2092103"
   };
 
   const pins = [
