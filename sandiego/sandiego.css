@@ -151,6 +151,55 @@ h4 {
   text-transform: none;
 }
 
+.access-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  margin: 0 0 12px;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.access-grid div {
+  display: grid;
+  gap: 4px;
+  align-content: start;
+  min-height: 72px;
+  background: var(--paper);
+  padding: 10px;
+}
+
+.access-grid span {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.access-grid strong,
+.access-grid small {
+  font-size: 0.86rem;
+}
+
+.access-grid small {
+  color: var(--muted);
+}
+
+.access-grid button {
+  justify-self: start;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.access-grid button:hover {
+  color: var(--clay);
+}
+
 .days,
 .links-section {
   border-top: 1px solid var(--line);
