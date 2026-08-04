@@ -153,6 +153,22 @@
     }, 1300);
   }
 
+  function readSessionValue(key) {
+    try {
+      return sessionStorage.getItem(key);
+    } catch {
+      return null;
+    }
+  }
+
+  function writeSessionValue(key, value) {
+    try {
+      sessionStorage.setItem(key, value);
+    } catch {
+      // Unlock still works when browser storage is unavailable.
+    }
+  }
+
   function revealAccessDetails() {
     document.querySelectorAll("[data-secret]").forEach((el) => {
       const value = accessDetails[el.dataset.secret] || "";
@@ -166,25 +182,39 @@
     if (grid) grid.hidden = false;
   }
 
-  const accessForm = document.querySelector("[data-access-form]");
-  if (sessionStorage.getItem(accessSessionKey) === "true") {
+  const accessLock = document.querySelector("[data-access-lock]");
+  const accessInput = document.querySelector("[data-access-code]");
+  const accessButton = document.querySelector("[data-access-unlock]");
+  const accessError = document.querySelector("[data-access-error]");
+
+  function unlockAccess() {
+    if (!accessInput) return;
+    if (accessInput.value.trim() !== accessCode) {
+      if (accessError) accessError.textContent = "Incorrect code";
+      accessInput.select();
+      return;
+    }
+
+    writeSessionValue(accessSessionKey, "true");
+    revealAccessDetails();
+    showToast("Unlocked");
+  }
+
+  if (readSessionValue(accessSessionKey) === "true") {
     revealAccessDetails();
   }
 
-  if (accessForm) {
-    accessForm.addEventListener("submit", (event) => {
-      event.preventDefault();
-      const input = accessForm.querySelector("[data-access-code]");
-      const error = accessForm.querySelector("[data-access-error]");
-      if (input && input.value.trim() === accessCode) {
-        sessionStorage.setItem(accessSessionKey, "true");
-        revealAccessDetails();
-        showToast("Unlocked");
-        return;
+  if (accessLock && accessInput && accessButton) {
+    accessButton.addEventListener("click", unlockAccess);
+    accessInput.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        unlockAccess();
       }
-
-      if (error) error.textContent = "Incorrect code";
-      if (input) input.select();
+    });
+    accessInput.addEventListener("input", () => {
+      if (accessError) accessError.textContent = "";
+      if (accessInput.value.trim() === accessCode) unlockAccess();
     });
   }
 

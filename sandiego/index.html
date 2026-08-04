@@ -12,7 +12,7 @@
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     />
-    <link rel="stylesheet" href="sandiego.css" />
+    <link rel="stylesheet" href="sandiego.css?v=20260804b" />
   </head>
 
   <body>
@@ -39,22 +39,23 @@
             <span>Message host when en route</span>
           </div>
           <div class="access-panel" data-access-panel>
-            <form class="access-lock" data-access-form>
+            <div class="access-lock" data-access-lock>
               <span>Access details</span>
               <div>
                 <input
                   type="password"
                   inputmode="numeric"
                   pattern="[0-9]*"
+                  maxlength="4"
                   autocomplete="off"
                   placeholder="Code"
                   aria-label="Access code"
                   data-access-code
                 />
-                <button type="submit">Unlock</button>
+                <button type="button" data-access-unlock>Unlock</button>
               </div>
               <small data-access-error aria-live="polite"></small>
-            </form>
+            </div>
           </div>
           <div class="access-grid" aria-label="Airbnb access details" hidden data-access-grid>
             <div>
@@ -527,6 +528,6 @@
     <div class="toast" role="status" aria-live="polite" hidden>Copied</div>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="sandiego.js"></script>
+    <script src="sandiego.js?v=20260804b"></script>
   </body>
 </html>
