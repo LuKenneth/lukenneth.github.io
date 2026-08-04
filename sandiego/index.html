@@ -38,31 +38,49 @@
             <span>Early check-in 1-2 PM</span>
             <span>Message host when en route</span>
           </div>
-          <div class="access-grid" aria-label="Airbnb access details">
+          <div class="access-panel" data-access-panel>
+            <form class="access-lock" data-access-form>
+              <span>Access details</span>
+              <div>
+                <input
+                  type="password"
+                  inputmode="numeric"
+                  pattern="[0-9]*"
+                  autocomplete="off"
+                  placeholder="Code"
+                  aria-label="Access code"
+                  data-access-code
+                />
+                <button type="submit">Unlock</button>
+              </div>
+              <small data-access-error aria-live="polite"></small>
+            </form>
+          </div>
+          <div class="access-grid" aria-label="Airbnb access details" hidden data-access-grid>
             <div>
               <span>Arrival</span>
-              <strong>North end of the street</strong>
+              <strong data-secret="arrival"></strong>
             </div>
             <div>
               <span>Main entrance</span>
-              <button type="button" data-copy="0279">0279</button>
-              <small>Press bottom button</small>
+              <button type="button" data-secret="mainEntrance" data-copy></button>
+              <small data-secret="mainNote"></small>
             </div>
             <div>
               <span>Side gate</span>
-              <button type="button" data-copy="C2501">C2501</button>
+              <button type="button" data-secret="sideGate" data-copy></button>
             </div>
             <div>
               <span>Wi-Fi</span>
-              <button type="button" data-copy="jacuzzi">jacuzzi</button>
+              <button type="button" data-secret="wifi" data-copy></button>
             </div>
             <div>
               <span>Password</span>
-              <button type="button" data-copy="jacuzzi3678">jacuzzi3678</button>
+              <button type="button" data-secret="wifiPassword" data-copy></button>
             </div>
             <div>
               <span>Pool / spa</span>
-              <strong>No glass. Rinse sand first.</strong>
+              <strong data-secret="poolSpa"></strong>
             </div>
           </div>
           <div class="actions">

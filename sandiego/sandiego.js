@@ -4,6 +4,18 @@
   const panels = Array.from(document.querySelectorAll(".day-panel"));
   const toast = document.querySelector(".toast");
   const dayMaps = new Map();
+  const accessSessionKey = "sd-trip:access-unlocked";
+  const accessCode = "7897";
+
+  const accessDetails = {
+    arrival: "North end of the street",
+    mainEntrance: "0279",
+    mainNote: "Press bottom button",
+    sideGate: "C2501",
+    wifi: "jacuzzi",
+    wifiPassword: "jacuzzi3678",
+    poolSpa: "No glass. Rinse sand first."
+  };
 
   const airbnb = {
     type: "airbnb",
@@ -141,20 +153,59 @@
     }, 1300);
   }
 
+  function revealAccessDetails() {
+    document.querySelectorAll("[data-secret]").forEach((el) => {
+      const value = accessDetails[el.dataset.secret] || "";
+      el.textContent = value;
+      if (el.hasAttribute("data-copy")) el.setAttribute("data-copy", value);
+    });
+
+    const panel = document.querySelector("[data-access-panel]");
+    const grid = document.querySelector("[data-access-grid]");
+    if (panel) panel.hidden = true;
+    if (grid) grid.hidden = false;
+  }
+
+  const accessForm = document.querySelector("[data-access-form]");
+  if (sessionStorage.getItem(accessSessionKey) === "true") {
+    revealAccessDetails();
+  }
+
+  if (accessForm) {
+    accessForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const input = accessForm.querySelector("[data-access-code]");
+      const error = accessForm.querySelector("[data-access-error]");
+      if (input && input.value.trim() === accessCode) {
+        sessionStorage.setItem(accessSessionKey, "true");
+        revealAccessDetails();
+        showToast("Unlocked");
+        return;
+      }
+
+      if (error) error.textContent = "Incorrect code";
+      if (input) input.select();
+    });
+  }
+
   tabs.forEach((tab) => {
     tab.addEventListener("click", () => setDay(tab.dataset.day, true));
   });
 
-  document.querySelectorAll("[data-copy]").forEach((button) => {
-    button.addEventListener("click", async () => {
-      const text = button.getAttribute("data-copy");
-      try {
-        await navigator.clipboard.writeText(text);
-        showToast("Copied");
-      } catch {
-        showToast(text);
-      }
-    });
+  document.addEventListener("click", async (event) => {
+    const button = event.target.closest("[data-copy]");
+    if (!button) return;
+
+    event.preventDefault();
+    const text = button.getAttribute("data-copy");
+    if (!text) return;
+
+    try {
+      await navigator.clipboard.writeText(text);
+      showToast("Copied");
+    } catch {
+      showToast(text);
+    }
   });
 
   document.querySelectorAll(".checks input[type='checkbox']").forEach((box) => {
