@@ -40,7 +40,7 @@
 
     { day: "thursday", type: "food", name: "Better Buzz Hillcrest", note: "801 University Ave", lat: 32.7484, lng: -117.1573, url: "https://www.google.com/maps/search/?api=1&query=801%20University%20Ave%20San%20Diego%20CA%2092103" },
     { day: "thursday", type: "food", name: "Liberty Public Market", note: "2820 Historic Decatur Rd", lat: 32.7405, lng: -117.2128, url: "https://www.google.com/maps/search/?api=1&query=2820%20Historic%20Decatur%20Rd%20San%20Diego%20CA%2092106" },
-    { day: "thursday", type: "food", name: "Barra Barra", note: "4016 Wallace St", lat: 32.7545, lng: -117.1967, url: "https://www.google.com/maps/search/?api=1&query=4016%20Wallace%20St%20San%20Diego%20CA%2092110" },
+    { day: "thursday", type: "food", name: "Tahona", note: "2414 San Diego Ave", lat: 32.7517, lng: -117.1934, url: "https://www.google.com/maps/search/?api=1&query=2414%20San%20Diego%20Ave%20San%20Diego%20CA%2092110" },
     { day: "thursday", type: "event", name: "SOMA", note: "3350 Sports Arena Blvd", lat: 32.7546, lng: -117.2125, url: "https://www.google.com/maps/search/?api=1&query=3350%20Sports%20Arena%20Blvd%20San%20Diego%20CA%2092110" },
 
     { day: "friday", type: "food", name: "World Famous", note: "711 Pacific Beach Dr", lat: 32.7936, lng: -117.2547, url: "https://www.google.com/maps/search/?api=1&query=711%20Pacific%20Beach%20Dr%20San%20Diego%20CA%2092109" },
