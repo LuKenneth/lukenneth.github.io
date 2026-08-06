@@ -45,6 +45,8 @@
 
     { day: "friday", type: "food", name: "World Famous", note: "711 Pacific Beach Dr", lat: 32.7936, lng: -117.2547, url: "https://www.google.com/maps/search/?api=1&query=711%20Pacific%20Beach%20Dr%20San%20Diego%20CA%2092109" },
     { day: "friday", type: "food", name: "North Park", note: "30th St", lat: 32.7478, lng: -117.1302, url: "https://www.google.com/maps/search/?api=1&query=North%20Park%20San%20Diego" },
+    { day: "friday", type: "activity", name: "Arcade Monsters", note: "704 J St", lat: 32.7094, lng: -117.1588, url: "https://www.google.com/maps/search/?api=1&query=704%20J%20St%20San%20Diego%20CA%2092101" },
+    { day: "friday", type: "food", name: "Neighborhood", note: "777 G St, opens 4 PM", lat: 32.7124, lng: -117.1574, url: "https://www.google.com/maps/search/?api=1&query=777%20G%20St%20San%20Diego%20CA%2092101" },
     { day: "friday", type: "event", name: "Petco Park", note: "100 Park Blvd", lat: 32.7076, lng: -117.157, url: "https://www.google.com/maps/search/?api=1&query=100%20Park%20Blvd%20San%20Diego%20CA%2092101" },
     { day: "friday", type: "food", name: "Tacos El Gordo", note: "511 F St", lat: 32.7136, lng: -117.1603, url: "https://www.google.com/maps/search/?api=1&query=511%20F%20St%20San%20Diego%20CA%2092101" },
 
